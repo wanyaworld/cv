@@ -1,6 +1,7 @@
 %-------------------------------------------------------------------------------
 %	SECTION TITLE
 %-------------------------------------------------------------------------------
+\vspace{4mm}
 \cvsection{Work Experience}
 
 
@@ -10,6 +11,22 @@
 \begin{cventries}
 
 %---------------------------------------------------------
+
+  \cventry
+    {Software Engineer} % Job title
+    {Moreh Corp.} % Organization
+    {Seoul, S.Korea} % Location
+    {Mar. 2021 - Present} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Developed a dedicated prefill engine that parallelizes long-context LLM prefill across multi-node GPU clusters using context parallelism (Ulysses + Ring Attention with zigzag load balancing), achieving sub-1s TTFT for 32K/64K contexts and enabling utilization of legacy GPUs in heterogeneous clusters.}
+        \item {Implemented a full-stack distributed machine learning framework, from user-level Python libraries (e.g., PyTorch) to GPU kernels, including the intermediate representation of computational graphs, a graph-level cost model for execution time prediction, and the compiler that leverages it to produce optimal execution plans.}
+        \item {Profiled and optimized performance bottlenecks across models and data transfer routines; diagnosed and rectified training anomalies, improving overall model reliability and performance.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+\vspace{4mm}
   \cventry
     {Software Engineer} % Job title
     {\mycompany{}. Co., Ltd.} % Organization
@@ -18,26 +35,11 @@
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
         \item {Implemented Windows API compatibility layers in Linux to run Windows binaries on \mycompany{}, a Linux-based operating system}
-	\item {Designed and developed proxy functions to support Windows inter-process COM function calls by generating x86 machine code at runtime}
-	\item {Bridged Windows and Linux calling conventions by inlining x86 assembly to ensure correct memory stack layout}
+	\item {Designed and developed proxy functions for Windows inter-process COM calls, bridging Windows/Linux calling conventions using runtime x86 machine code generation and inline assembly}
 	\item {Developed an RPC server for \mycompany{} from scratch, mimicking the Windows counterpart}  
       \end{cvitems}
     }
 
 %---------------------------------------------------------
-  \cventry
-    {Software Engineer} % Job title
-    {Moreh Corp.} % Organization
-    {Seoul, S.Korea} % Location
-    {Mar. 2021 - Present} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Implemented a full-stack distributed machine learning framework, from user-level Python libraries (e.g., PyTorch) to GPU kernels.}
-        \item {Developed and maintained the intermediate representation of computational graphs, along with the associated compiler and execution module.}
-	\item {Optimized data transfer routines in the ML framework (data loader to GPU).}
-        \item {Analyzed and optimized models' performance bottlenecks.}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
 \end{cventries}
+\vspace{4mm}
