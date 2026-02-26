@@ -1,0 +1,91 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Korean font support (XeLaTeX)
+\usepackage{kotex}
+\setmainhangulfont[AutoFakeBold]{Malgun Gothic}
+\setsanshangulfont[AutoFakeBold]{Malgun Gothic}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+\colorlet{awesome}{awesome-red}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% Social information separator
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+% Override sectionstyle: awesome-cv's default \@sectioncolor takes 3 Latin tokens
+% which breaks on short Korean section titles. Color the entire title instead.
+\renewcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\ifbool{acvSectionColorHighlight}{\color{awesome}}{\color{text}}#1}}
+\newcommand{\myfirstname}{{김장웅}}
+\newcommand{\mylastname}{{}}
+\newcommand{\myuniv}{{Sogang University}}
+\newcommand{\mycompany}{{TmaxOS}}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+\name{\myfirstname{}}{\mylastname{}}
+
+\dateofbirth{1994년 07월 24일}
+\email{6812skiii@gmail.com}
+\homepage{sites.google.com/site/hollyatook}
+\homepage{scholar.google.com/citations?user=Ij0xJSUAAAAJ\&hl=en}
+\github{wanyaworld}
+
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+\makecvfooter
+  {\today}
+  {\myfirstname{} \mylastname{}~~~·~~~이력서}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%-------------------------------------------------------------------------------
+
+\input{cv_ko/skills.tex}
+\input{cv_ko/experiences.tex}
+\input{cv_ko/education.tex}
+\input{cv_ko/publications.tex}
+\input{cv_ko/military.tex}
+
+
+
+%-------------------------------------------------------------------------------
+\end{document}
